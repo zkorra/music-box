@@ -17,7 +17,7 @@ public class Pad
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                File Sound = new File("profile", "L_KICK_037.wav");
+                File Sound = new File("profile", "AIDS!.wav");
                 playSound(Sound);
             }
         });
@@ -25,7 +25,7 @@ public class Pad
         button2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                File Sound = new File("profile", "L_KICK_038.wav");
+                File Sound = new File("profile", "I_like_what_you_got.wav");
                 playSound(Sound);
             }
         });
@@ -33,7 +33,7 @@ public class Pad
         button3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                File Sound = new File("profile", "L_SNARE_011.wav");
+                File Sound = new File("profile", "lick_my_balls.wav");
                 playSound(Sound);
             }
         });
@@ -41,7 +41,7 @@ public class Pad
         button4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                File Sound = new File("profile", "L_SNARE_013.wav");
+                File Sound = new File("profile", "woo_vu_luvub_dub_dub.wav");
                 playSound(Sound);
             }
         });
