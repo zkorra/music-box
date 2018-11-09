@@ -15,33 +15,29 @@ public class Pad
 
     public Pad() {
         button1.addActionListener(new ActionListener() {
-            @Override
             public void actionPerformed(ActionEvent e) {
-                File Sound = new File("profile", "AIDS!.wav");
+                File Sound = new File("profile/default", "1.wav");
                 playSound(Sound);
             }
         });
 
         button2.addActionListener(new ActionListener() {
-            @Override
             public void actionPerformed(ActionEvent e) {
-                File Sound = new File("profile", "I_like_what_you_got.wav");
+                File Sound = new File("profile/default", "2.wav");
                 playSound(Sound);
             }
         });
 
         button3.addActionListener(new ActionListener() {
-            @Override
             public void actionPerformed(ActionEvent e) {
-                File Sound = new File("profile", "lick_my_balls.wav");
+                File Sound = new File("profile/default", "3.wav");
                 playSound(Sound);
             }
         });
 
         button4.addActionListener(new ActionListener() {
-            @Override
             public void actionPerformed(ActionEvent e) {
-                File Sound = new File("profile", "woo_vu_luvub_dub_dub.wav");
+                File Sound = new File("profile/default", "4.wav");
                 playSound(Sound);
             }
         });
@@ -64,11 +60,13 @@ public class Pad
             clip.open(AudioSystem.getAudioInputStream(Sound));
             clip.start();
 
-            Thread.sleep(clip.getMicrosecondLength()/100000);
+            Thread.sleep(clip.getMicrosecondLength()/1000000);
         }
         catch(Exception e)
         {
 
         }
     }
+
+
 }
