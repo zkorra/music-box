@@ -1,5 +1,7 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import javax.swing.*;
 import javax.sound.sampled.AudioSystem;
@@ -18,12 +20,12 @@ public class Pad
     private int temp = 0;
 
     public Pad() {
-        button1.addActionListener(new ActionListener() {
+  /*      button1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if(temp == 0) { File Sound = new File("profile/default", "1.wav"); playSound(Sound);}
                 else if(temp == 1) { File Sound = new File("profile/default2", "1.wav"); playSound(Sound);}
             }
-        });
+        }); */
 
         button2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -55,6 +57,35 @@ public class Pad
         defaultButton2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 temp = 1;
+            }
+        });
+
+        button1.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                int keyCode = e.getKeyCode();
+                if(keyCode == KeyEvent.VK_E){
+                    if(temp == 0) { File Sound = new File("profile/default", "1.wav"); playSound(Sound);}
+                    else if(temp == 1) { File Sound = new File("profile/default2", "1.wav"); playSound(Sound);}
+                }
+            }
+        });
+        button2.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                super.keyPressed(e);
+            }
+        });
+        button3.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                super.keyPressed(e);
+            }
+        });
+        button4.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                super.keyTyped(e);
             }
         });
     }
