@@ -19,28 +19,28 @@ public class Pad
     public Pad() {
         button1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                File Sound = new File("profile/default", "1.wav");
+                File Sound = new File("profile/default2", "1.wav");
                 playSound(Sound);
             }
         });
 
         button2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                File Sound = new File("profile/default", "2.wav");
+                File Sound = new File("profile/default2", "2.wav");
                 playSound(Sound);
             }
         });
 
         button3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                File Sound = new File("profile/default", "3.wav");
+                File Sound = new File("profile/default2", "3.wav");
                 playSound(Sound);
             }
         });
 
         button4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                File Sound = new File("profile/default", "4.wav");
+                File Sound = new File("profile/default2", "4.wav");
                 playSound(Sound);
             }
         });
