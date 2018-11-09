@@ -64,12 +64,13 @@ public class Pad
             @Override
             public void keyPressed(KeyEvent e) {
                 int keyCode = e.getKeyCode();
-                if(keyCode == KeyEvent.VK_Q){
+                if(keyCode == KeyEvent.VK_E){
                     if(temp == 0) { File Sound = new File("profile/default", "1.wav"); playSound(Sound);}
                     else if(temp == 1) { File Sound = new File("profile/default2", "1.wav"); playSound(Sound);}
                 }
             }
         });
+
         button2.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
@@ -81,6 +82,7 @@ public class Pad
                 }
             }
         });
+
         button3.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
@@ -92,6 +94,7 @@ public class Pad
                 }
             }
         });
+
         button4.addKeyListener(new KeyAdapter() {
             @Override
             public void keyTyped(KeyEvent e) {
