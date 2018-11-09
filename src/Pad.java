@@ -12,36 +12,49 @@ public class Pad
     private JButton button2;
     private JButton button3;
     private JButton button4;
-    private JButton button6;
-    private JButton button7;
-    private JButton button8;
+    private JButton userButton;
+    private JButton defaultButton2;
+    private JButton defaultButton1;
+    private int temp = 0;
 
     public Pad() {
         button1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                File Sound = new File("profile/default", "1.wav");
-                playSound(Sound);
+                if(temp == 0) { File Sound = new File("profile/default", "1.wav"); playSound(Sound);}
+                else if(temp == 1) { File Sound = new File("profile/default2", "1.wav"); playSound(Sound);}
             }
         });
 
         button2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                File Sound = new File("profile/default", "2.wav");
-                playSound(Sound);
+                if(temp == 0) { File Sound = new File("profile/default", "2.wav"); playSound(Sound);}
+                else if(temp == 1) { File Sound = new File("profile/default2", "2.wav"); playSound(Sound);}
             }
         });
 
         button3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                File Sound = new File("profile/default", "3.wav");
-                playSound(Sound);
+                if(temp == 0) { File Sound = new File("profile/default", "3.wav"); playSound(Sound);}
+                else if(temp == 1) { File Sound = new File("profile/default2", "3.wav"); playSound(Sound);}
             }
         });
 
         button4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                File Sound = new File("profile/default", "4.wav");
-                playSound(Sound);
+                if(temp == 0) { File Sound = new File("profile/default", "4.wav"); playSound(Sound);}
+                else if(temp == 1) { File Sound = new File("profile/default2", "4.wav"); playSound(Sound);}
+            }
+        });
+
+        defaultButton1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                temp = 0;
+            }
+        });
+
+        defaultButton2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                temp = 1;
             }
         });
     }
@@ -54,6 +67,7 @@ public class Pad
         frame.pack();
         frame.setVisible(true);
     }
+
     static void playSound(File Sound)
     {
         try
