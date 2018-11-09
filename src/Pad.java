@@ -54,7 +54,6 @@ public class Pad
         frame.pack();
         frame.setVisible(true);
     }
-
     static void playSound(File Sound)
     {
         try
