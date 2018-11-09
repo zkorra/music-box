@@ -12,7 +12,9 @@ public class Pad
     private JButton button2;
     private JButton button3;
     private JButton button4;
-
+    private JButton button6;
+    private JButton button7;
+    private JButton button8;
 
     public Pad() {
         button1.addActionListener(new ActionListener() {
