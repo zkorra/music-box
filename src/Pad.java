@@ -20,13 +20,6 @@ public class Pad
     private int temp = 0;
 
     public Pad() {
-        button1.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                if(temp == 0) { File Sound = new File("profile/default", "1.wav"); playSound(Sound);}
-                else if(temp == 1) { File Sound = new File("profile/default2", "1.wav"); playSound(Sound);}
-            }
-        });
-
         button2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if(temp == 0) { File Sound = new File("profile/default", "2.wav"); playSound(Sound);}
@@ -61,44 +54,52 @@ public class Pad
         });
 
         button1.addKeyListener(new KeyAdapter() {
+            @Override
             public void keyPressed(KeyEvent e) {
-                if(e.getKeyCode() == KeyEvent.VK_Q){
+                int keyCode = e.getKeyCode();
+                if(keyCode == KeyEvent.VK_Q){
                     if(temp == 0) { File Sound = new File("profile/default", "1.wav"); playSound(Sound);}
                     else if(temp == 1) { File Sound = new File("profile/default2", "1.wav"); playSound(Sound);}
                 }
             }
         });
-
         button2.addKeyListener(new KeyAdapter() {
+            @Override
             public void keyPressed(KeyEvent e) {
-                if(e.getKeyCode() == KeyEvent.VK_W)
+                int keyCode = e.getKeyCode();
+                if(keyCode == KeyEvent.VK_W)
                 {
                     if(temp == 0) { File Sound = new File("profile/default", "2.wav"); playSound(Sound);}
                     else if(temp == 1) { File Sound = new File("profile/default2", "2.wav"); playSound(Sound);}
                 }
             }
         });
-
         button3.addKeyListener(new KeyAdapter() {
+            @Override
             public void keyPressed(KeyEvent e) {
-                if(e.getKeyCode() == KeyEvent.VK_A)
+                int keyCode = e.getKeyCode();
+                if(keyCode == KeyEvent.VK_A)
                 {
                     if(temp == 0) { File Sound = new File("profile/default", "3.wav"); playSound(Sound);}
                     else if(temp == 1) { File Sound = new File("profile/default2", "3.wav"); playSound(Sound);}
                 }
             }
         });
-
         button4.addKeyListener(new KeyAdapter() {
-            public void keyPressed(KeyEvent e) {
-                if(e.getKeyCode() == KeyEvent.VK_S)
+            @Override
+            public void keyTyped(KeyEvent e) {
+                int keyCode = e.getKeyCode();
+                if(keyCode == KeyEvent.VK_S)
                 {
                     if(temp == 0) { File Sound = new File("profile/default", "4.wav"); playSound(Sound);}
                     else if(temp == 1) { File Sound = new File("profile/default2", "4.wav"); playSound(Sound);}
                 }
             }
         });
-
+    }
+    public void actionPerformed(ActionEvent e) {
+        if(temp == 0) { File Sound = new File("profile/default", "1.wav"); playSound(Sound);}
+        else if(temp == 1) { File Sound = new File("profile/default2", "1.wav"); playSound(Sound);}
     }
 
     public static void main(String[] args)
