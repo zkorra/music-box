@@ -1,11 +1,11 @@
+package Music_b;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import javax.swing.*;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
 
 public class Pad
 {
@@ -22,29 +22,29 @@ public class Pad
     public Pad() {
         button1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                if(temp == 0) { File Sound = new File("profile/default", "1.wav"); playSound(Sound);}
-                else if(temp == 1) { File Sound = new File("profile/default2", "1.wav"); playSound(Sound);}
+                if(temp == 0) { File Sound = new File("profile/default", "1.wav"); Music_b.Sound.playSound(Sound);}
+                else if(temp == 1) { File Sound = new File("profile/default2", "1.wav"); Music_b.Sound.playSound(Sound);}
             }
         });
 
         button2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                if(temp == 0) { File Sound = new File("profile/default", "2.wav"); playSound(Sound);}
-                else if(temp == 1) { File Sound = new File("profile/default2", "2.wav"); playSound(Sound);}
+                if(temp == 0) { File Sound = new File("profile/default", "2.wav"); Music_b.Sound.playSound(Sound);}
+                else if(temp == 1) { File Sound = new File("profile/default2", "2.wav"); Music_b.Sound.playSound(Sound);}
             }
         });
 
         button3.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                if(temp == 0) { File Sound = new File("profile/default", "3.wav"); playSound(Sound);}
-                else if(temp == 1) { File Sound = new File("profile/default2", "3.wav"); playSound(Sound);}
+                if(temp == 0) { File Sound = new File("profile/default", "3.wav"); Music_b.Sound.playSound(Sound);}
+                else if(temp == 1) { File Sound = new File("profile/default2", "3.wav"); Music_b.Sound.playSound(Sound);}
             }
         });
 
         button4.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                if(temp == 0) { File Sound = new File("profile/default", "4.wav"); playSound(Sound);}
-                else if(temp == 1) { File Sound = new File("profile/default2", "4.wav"); playSound(Sound);}
+                if(temp == 0) { File Sound = new File("profile/default", "4.wav"); Music_b.Sound.playSound(Sound);}
+                else if(temp == 1) { File Sound = new File("profile/default2", "4.wav"); Music_b.Sound.playSound(Sound);}
             }
         });
 
@@ -60,17 +60,18 @@ public class Pad
             }
         });
 
-        button1.addKeyListener(new KeyAdapter() {
+       button1.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
                 int keyCode = e.getKeyCode();
                 if(keyCode == KeyEvent.VK_Q){
-                    if(temp == 0) { File Sound = new File("profile/default", "1.wav"); playSound(Sound);}
-                    else if(temp == 1) { File Sound = new File("profile/default2", "1.wav"); playSound(Sound);}
+                    if(temp == 0) { File Sound = new File("profile/default", "1.wav"); Music_b.Sound.playSound(Sound);}
+                    else if(temp == 1) { File Sound = new File("profile/default2", "1.wav"); Music_b.Sound.playSound(Sound);}
                 }
             }
         });
-        button2.addKeyListener(new KeyAdapter() {
+
+        /*button2.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
                 int keyCode = e.getKeyCode();
@@ -102,14 +103,7 @@ public class Pad
                     else if(temp == 1) { File Sound = new File("profile/default2", "4.wav"); playSound(Sound);}
                 }
             }
-        });
-    }
-    private void button1KeyPressed(java.awt.event.KeyEvent evt) {
-        if(evt.getKeyChar() == 'a')
-        {
-            if(temp == 0) { File Sound = new File("profile/default", "1.wav"); playSound(Sound);}
-            else if(temp == 1) { File Sound = new File("profile/default2", "1.wav"); playSound(Sound);}
-        }
+        });*/
     }
 
     public static void main(String[] args)
@@ -121,22 +115,6 @@ public class Pad
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-    }
-
-    static void playSound(File Sound)
-    {
-        try
-        {
-            Clip clip = AudioSystem.getClip();
-            clip.open(AudioSystem.getAudioInputStream(Sound));
-            clip.start();
-
-            Thread.sleep(clip.getMicrosecondLength()/1000000);
-        }
-        catch(Exception e)
-        {
-
-        }
     }
 
 }
