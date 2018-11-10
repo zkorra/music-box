@@ -20,6 +20,13 @@ public class Pad
     private int temp = 0;
 
     public Pad() {
+        button1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                if(temp == 0) { File Sound = new File("profile/default", "1.wav"); playSound(Sound);}
+                else if(temp == 1) { File Sound = new File("profile/default2", "1.wav"); playSound(Sound);}
+            }
+        });
+
         button2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if(temp == 0) { File Sound = new File("profile/default", "2.wav"); playSound(Sound);}
@@ -97,9 +104,12 @@ public class Pad
             }
         });
     }
-    public void actionPerformed(ActionEvent e) {
-        if(temp == 0) { File Sound = new File("profile/default", "1.wav"); playSound(Sound);}
-        else if(temp == 1) { File Sound = new File("profile/default2", "1.wav"); playSound(Sound);}
+    private void button1KeyPressed(java.awt.event.KeyEvent evt) {
+        if(evt.getKeyChar() == 'a')
+        {
+            if(temp == 0) { File Sound = new File("profile/default", "1.wav"); playSound(Sound);}
+            else if(temp == 1) { File Sound = new File("profile/default2", "1.wav"); playSound(Sound);}
+        }
     }
 
     public static void main(String[] args)
