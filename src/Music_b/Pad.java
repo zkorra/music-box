@@ -39,26 +39,26 @@ public class Pad implements ActionListener, KeyListener
     {
         if(e.getSource() == button1)
         {
-            if(temp == 0) { File Sound = new File("profile/default", "1.wav"); Music_b.Sound.playSound(Sound);}
-                else if(temp == 1) { File Sound = new File("profile/default2", "1.wav"); Music_b.Sound.playSound(Sound);}
+            if(temp == 0) { File Sound = new File("profiles/default1", "1.wav"); Music_b.Sound.playSound(Sound);}
+                else if(temp == 1) { File Sound = new File("profiles/default2", "1.wav"); Music_b.Sound.playSound(Sound);}
         }
 
         else if(e.getSource() == button2)
         {
-            if(temp == 0) { File Sound = new File("profile/default", "2.wav"); Music_b.Sound.playSound(Sound);}
-                else if(temp == 1) { File Sound = new File("profile/default2", "2.wav"); Music_b.Sound.playSound(Sound);}
+            if(temp == 0) { File Sound = new File("profiles/default1", "2.wav"); Music_b.Sound.playSound(Sound);}
+                else if(temp == 1) { File Sound = new File("profiles/default2", "2.wav"); Music_b.Sound.playSound(Sound);}
         }
 
         else if(e.getSource() == button3)
         {
-            if(temp == 0) { File Sound = new File("profile/default", "3.wav"); Music_b.Sound.playSound(Sound);}
-                else if(temp == 1) { File Sound = new File("profile/default2", "3.wav"); Music_b.Sound.playSound(Sound);}
+            if(temp == 0) { File Sound = new File("profiles/default1", "3.wav"); Music_b.Sound.playSound(Sound);}
+                else if(temp == 1) { File Sound = new File("profiles/default2", "3.wav"); Music_b.Sound.playSound(Sound);}
         }
 
         else if(e.getSource() == button4)
         {
-            if(temp == 0) { File Sound = new File("profile/default", "4.wav"); Music_b.Sound.playSound(Sound);}
-                else if(temp == 1) { File Sound = new File("profile/default2", "4.wav"); Music_b.Sound.playSound(Sound);}
+            if(temp == 0) { File Sound = new File("profiles/default1", "4.wav"); Music_b.Sound.playSound(Sound);}
+                else if(temp == 1) { File Sound = new File("profiles/default2", "4.wav"); Music_b.Sound.playSound(Sound);}
         }
 
         else if(e.getSource() == defaultButton1) { temp = 0; }
@@ -71,26 +71,26 @@ public class Pad implements ActionListener, KeyListener
     {
         if(e.getKeyCode() == KeyEvent.VK_Q)
         {
-            if(temp == 0) { File Sound = new File("profile/default", "1.wav"); Music_b.Sound.playSound(Sound);}
-            else if(temp == 1) { File Sound = new File("profile/default2", "1.wav"); Music_b.Sound.playSound(Sound);}
+            if(temp == 0) { File Sound = new File("profiles/default1", "1.wav"); Music_b.Sound.playSound(Sound);}
+            else if(temp == 1) { File Sound = new File("profiles/default2", "1.wav"); Music_b.Sound.playSound(Sound);}
         }
 
         else if(e.getKeyCode() == KeyEvent.VK_W)
         {
-            if(temp == 0) { File Sound = new File("profile/default", "2.wav"); Music_b.Sound.playSound(Sound);}
-            else if(temp == 1) { File Sound = new File("profile/default2", "2.wav"); Music_b.Sound.playSound(Sound);}
+            if(temp == 0) { File Sound = new File("profiles/default1", "2.wav"); Music_b.Sound.playSound(Sound);}
+            else if(temp == 1) { File Sound = new File("profiles/default2", "2.wav"); Music_b.Sound.playSound(Sound);}
         }
 
         else if(e.getKeyCode() == KeyEvent.VK_A)
         {
-            if(temp == 0) { File Sound = new File("profile/default", "3.wav"); Music_b.Sound.playSound(Sound);}
-            else if(temp == 1) { File Sound = new File("profile/default2", "3.wav"); Music_b.Sound.playSound(Sound);}
+            if(temp == 0) { File Sound = new File("profiles/default1", "3.wav"); Music_b.Sound.playSound(Sound);}
+            else if(temp == 1) { File Sound = new File("profiles/default2", "3.wav"); Music_b.Sound.playSound(Sound);}
         }
 
         else if(e.getKeyCode() == KeyEvent.VK_S)
         {
-            if(temp == 0) { File Sound = new File("profile/default", "4.wav"); Music_b.Sound.playSound(Sound);}
-            else if(temp == 1) { File Sound = new File("profile/default2", "4.wav"); Music_b.Sound.playSound(Sound);}
+            if(temp == 0) { File Sound = new File("profiles/default1", "4.wav"); Music_b.Sound.playSound(Sound);}
+            else if(temp == 1) { File Sound = new File("profiles/default2", "4.wav"); Music_b.Sound.playSound(Sound);}
         }
 
         else if(e.getKeyCode() == KeyEvent.VK_1) { temp = 0; }
