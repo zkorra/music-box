@@ -1,12 +1,12 @@
 package Music_b;
 
+import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
 import javax.swing.*;
 
-public class Pad implements ActionListener, KeyListener
+public class Pad extends JFrame implements ActionListener, KeyListener
 {
-
     private JPanel mainPanel;
     private JButton button1;
     private JButton button2;
@@ -15,10 +15,12 @@ public class Pad implements ActionListener, KeyListener
     private JButton userButton;
     private JButton defaultButton1;
     private JButton defaultButton2;
+    private JPanel JPanel1;
     private int temp = 0;
 
     public Pad() {
-
+        mainPanel.setBackground(Color.black);
+        JPanel1.setBackground(Color.black);
         button1.addActionListener(this);
         button2.addActionListener(this);
         button3.addActionListener(this);
@@ -32,6 +34,20 @@ public class Pad implements ActionListener, KeyListener
         button4.addKeyListener(this);
         defaultButton1.addKeyListener(this);
         defaultButton2.addKeyListener(this);
+        button1.setBorder ( BorderFactory.createLineBorder ( Color.darkGray, 4 ) );
+        button1.setBackground(Color.gray);
+        button2.setBorder ( BorderFactory.createLineBorder ( Color.darkGray, 4 ) );
+        button2.setBackground(Color.gray);
+        button3.setBorder ( BorderFactory.createLineBorder ( Color.darkGray, 4 ) );
+        button3.setBackground(Color.gray);
+        button4.setBorder ( BorderFactory.createLineBorder ( Color.darkGray, 4 ) );
+        button4.setBackground(Color.gray);
+        defaultButton1.setBackground(Color.white);
+        defaultButton1.setBorder( BorderFactory.createLineBorder ( Color.darkGray, 4 ));
+        defaultButton2.setBackground(Color.white);
+        defaultButton2.setBorder( BorderFactory.createLineBorder ( Color.darkGray, 4 ));
+        userButton.setBackground(Color.white);
+        userButton.setBorder( BorderFactory.createLineBorder ( Color.darkGray, 4 ));
 
     }
 
@@ -71,6 +87,7 @@ public class Pad implements ActionListener, KeyListener
     {
         if(e.getKeyCode() == KeyEvent.VK_Q)
         {
+
             if(temp == 0) { File Sound = new File("profiles/default1", "1.wav"); Music_b.Sound.playSound(Sound);}
             else if(temp == 1) { File Sound = new File("profiles/default2", "1.wav"); Music_b.Sound.playSound(Sound);}
         }
@@ -116,6 +133,9 @@ public class Pad implements ActionListener, KeyListener
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+        frame.setSize(400,420);
+        frame.setTitle("Music_Box");
+        frame.setResizable(false);
     }
 
 }
